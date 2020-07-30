@@ -53,7 +53,7 @@ steps:
 
 - task: PowerShell@2
   displayName: 'Update Docs.MS CI Targeted Packages'
-  condition: (and(succeededOrFailed(), eq('${{ parameters.OnboardingBranch }}','')))
+  condition: and(succeededOrFailed(), eq('${{ parameters.OnboardingBranch }}',''))
   inputs:
     targetType: filePath
     filePath: ${{ parameters.ScriptDirectory }}/update-docs-ci.ps1
