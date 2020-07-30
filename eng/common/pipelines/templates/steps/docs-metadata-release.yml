@@ -82,7 +82,7 @@ steps:
     GHReviewersVariable: ${{ parameters.GHReviewersVariable }}
     GHTeamReviewersVariable: ${{ parameters.GHTeamReviewersVariable }} 
 
-- ${{if ne( ${{ parameters.OnboardingBranch }}, '')}}:
+- ${{if ne( parameters['OnboardingBranch'], '')}}:
   - pwsh: |
       Push-Location ${{ parameters.WorkingDirectory }}/repo
 
