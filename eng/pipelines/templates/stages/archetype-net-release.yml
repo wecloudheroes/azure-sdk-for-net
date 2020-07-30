@@ -193,6 +193,7 @@ stages:
                           DocRepoDestinationPath: 'api/overview/azure/' 
                           GHReviewersVariable: 'OwningGHUser'
                           CIConfigs: $(CIConfigs)
+                          OnboardingBranch: 'onboarding'
 
           - ${{if ne(artifact.options.skipPublishDocs, 'true')}}:
             - deployment: PublishDocs
